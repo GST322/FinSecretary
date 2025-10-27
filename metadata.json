@@ -1,0 +1,5 @@
+{
+  "name": "Financial Secretary AI",
+  "description": "An intelligent financial assistant to manage your budget, savings, and investments. It provides analysis based on your data and trusted financial sources, helping you make informed decisions about your capital.",
+  "requestFramePermissions": []
+}
