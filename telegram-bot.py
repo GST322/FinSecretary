@@ -1,9 +1,9 @@
 #Инициализация бота
 import telebot
+import os
 
 #Инициализация dotenv
 from dotenv import load_dotenv
-import os
 
 load_dotenv()
 #Активация бота
@@ -66,11 +66,12 @@ def handle_text(message):
         bot.send_message(chat_id,
             f"Сентимент: {r['label']}\n"
             f"Уверенность: {r['score']}%\n"
-            f"Перевод: {r['translated']}"
+            f"Текст: {r['translated']}"
         )
     else:
         bot.send_message(chat_id, '💭 Думаю...')
         from tools.ai import ask_ai
         bot.send_message(chat_id, ask_ai(message.text))
 
-bot.polling(none_stop=True)
+if __name__ == '__main__':
+    bot.polling(none_stop=True)

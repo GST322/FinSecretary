@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Финансовый секретарь</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Финансовый секретарь</h1>
+    </header>
+    <main>
+        <section class="status">
+            <h2>Статус системы</h2>
+            <p>Бот: <span class="status-ok">Активен</span></p>
+            <p>Аналитика: <span class="status-ok">Алгоритмическая (локальная)</span></p>
+        </section>
+        <section class="upload">
+            <h2>Загрузка отчёта брокера</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="report">Выберите HTML-файл отчёта:</label>
+                <input type="file" id="report" name="report" accept=".html,.htm" required>
+                <button type="submit">Загрузить</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 FinSecretary</p>
+    </footer>
+</body>
+</html>
