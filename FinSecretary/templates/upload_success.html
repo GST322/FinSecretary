@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Файл загружен</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Финансовый секретарь</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/upload">Загрузить</a>
+            <a href="/reports">Отчёты</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Загрузка завершена</h2>
+            <p>Файл <strong>{{ filename }}</strong> успешно сохранён.</p>
+            <p><a href="/reports">Посмотреть все отчёты</a> или <a href="/upload">загрузить ещё</a>.</p>
+        </section>
+    </main>
+    <footer><p>&copy; 2026 FinSecretary</p></footer>
+</body>
+</html>

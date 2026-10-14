@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загруженные отчёты</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Финансовый секретарь</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/upload">Загрузить</a>
+            <a href="/reports">Отчёты</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Загруженные отчёты</h2>
+            {% if files %}
+            <ul class="file-list">
+                {% for f in files %}
+                <li>
+                    <span>{{ f }}</span>
+                    <a href="/uploads/{{ f }}" target="_blank">Открыть</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>Отчётов пока нет. <a href="/upload">Загрузите первый</a>.</p>
+            {% endif %}
+        </section>
+    </main>
+    <footer><p>&copy; 2026 FinSecretary</p></footer>
+</body>
+</html>

@@ -47,7 +47,8 @@ def handle_buttons(call):
         bot.send_message(chat_id, '📰 Введите текст новости:')
 
     elif call.data == 'portfolio':
-        bot.send_message(chat_id, '💼 Портфель в разработке.')
+        from tools.portfolio import get_portfolio_text
+        bot.send_message(chat_id, get_portfolio_text())
 
     elif call.data == 'settings':
         bot.send_message(chat_id, '⚙️ Настройки в разработке.')
